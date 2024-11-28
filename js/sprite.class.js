@@ -59,11 +59,10 @@ class Sprite extends Rectangle {
 
         this.gravity = 0.8;
 
-        if (imgSrc != '') {
-            this.reset_image(imgSrc, col, row, buffer);
-            this.scale = scale;
-        }
+        this.scale = scale;
 
+        
+            this.reset_image(imgSrc, col, row, buffer);
 
 
         this.fallen = false;

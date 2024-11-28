@@ -28,12 +28,9 @@ const main_player = new Fighter({
         y: 265
     },
     name: "player_one",
-    imgSrc: 'img/sprites/samurai_mack/idle.png',
-    col: 8,
     height: 200,
     width:  77,
     scale: 3.8,
-    buffer: 14,
     attack_box_offset: {
         y: 50,
         x: 50
@@ -64,13 +61,9 @@ const team_player = new Fighter({
         x: -150
     },
 
-    
-    imgSrc: 'img/sprites/kenji/idle.png',
-    col: 4,
     height: 200,
     width:  57,
     scale: 3.8,
-    buffer: 9,
 
 });
 
@@ -160,6 +153,7 @@ class Game {
 
 
     end_round(winner, loser) {
+        console.log(this.round);
 
         let verbs = ["smashed", "pulverized", "destroyed", "deleted", "ended"]
         let random_verb = verbs[Math.trunc(Math.random() * verbs.length)];
@@ -168,7 +162,7 @@ class Game {
         this.set_win_message(phrase);
         console.log(phrase);
 
-        winner.talk("get fucked bitch");
+        winner.talk("get fucked bombaclot");
 
         setTimeout(() => {
 
@@ -325,12 +319,13 @@ class Game {
                 if (player.fallen === true) {
                     this.end_round(player.enemies[0], player);
                     this.isRoundOver = true;
+                    break;
                 } else if (
                     player.enemies[0].fallen === true
                 ) {
                     this.isRoundOver = true;
                     this.end_round(player, player.enemies[0]);
-
+                    break;
                 }
 
             }

@@ -160,6 +160,11 @@ class Fighter extends Sprite {
         //orbs
 
 
+        this.inital_position = {
+            x: x,
+            y: y
+        };
+
         //this.truth_seeking();
         this.revolve = false;
 
@@ -284,6 +289,7 @@ class Fighter extends Sprite {
     update_entities() {
 
 
+
         for (let i = 0; i < this.entities.length; i++) {
             let entity = this.entities[i];
 
@@ -387,7 +393,7 @@ class Fighter extends Sprite {
 
             this.gravity = 0.8;
         }
-    } 
+    }
 
 
     update_health() {
@@ -428,10 +434,10 @@ class Fighter extends Sprite {
                         this.switch_sprites('fall');
                         this.last_action = 'fall';
                     }
-                     else if (this.velocity.x != 0 && this.last_action != 'run') {
+                    else if (this.velocity.x != 0 && this.last_action != 'run') {
                         this.switch_sprites('run');
                         this.last_action = 'run';
-                     }
+                    }
 
 
                 }
@@ -597,6 +603,7 @@ class Fighter extends Sprite {
         this.last_action = 'idle';
         this.switch_sprites();
         this.sent_died_timeout = null;
+        this.position = this.inital_position;
     }
 
 
