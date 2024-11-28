@@ -1,0 +1,49 @@
+{
+    "settings": {
+        "path" : "img/sprites/kenji/",
+        "extension" : ".png",
+        "author" : "i forgot sorry"
+    },
+    "idle": {
+        "col": 4,
+        "buffer": 14
+    },
+    
+    "run": {
+        "col": 8,
+        "buffer": 10
+    },
+    
+    "jump": {
+        "col": 2,
+        "buffer": 4
+    },
+    
+    "attack_one": {
+        "col": 4,
+        "buffer": 9
+    },
+    
+    "attack_two": {
+        "col": 4,
+        "buffer": 8
+    },
+    
+    "death": {
+        "col": 7,
+        "buffer": 18
+    },
+    
+    "take_hit": {
+        "col": 3,
+        "buffer": 3
+    },
+    
+    "fall": {
+        "col": 2,
+        "buffer": 3
+    }
+    
+    
+    
+}

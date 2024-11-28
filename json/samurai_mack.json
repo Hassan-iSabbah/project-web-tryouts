@@ -1,0 +1,43 @@
+{
+    "settings": {
+        "path": "img/sprites/samurai_mack/",
+        "extension": ".png",
+        "author": "i forgot sorry"
+    },
+    "idle": {
+        "col": 8,
+        "buffer": 14
+    },
+    "run": {
+        "col": 8,
+        "buffer": 12
+    },
+    "jump": {
+        "col": 2,
+        "buffer": 4
+    },
+    "fall": {
+        "col": 2,
+        "buffer": 3
+    },
+    "attack_one": {
+        "col": 6,
+        "buffer": 9
+    },
+    "attack_two": {
+        "col": 6,
+        "buffer": 8
+    },
+    "death": {
+        "col": 6,
+        "buffer": 3
+    },
+    "take_hit": {
+        "col": 4,
+        "buffer": 3
+    },
+    "take_hit_white": {
+        "col": 4,
+        "buffer": 3
+    }
+}
